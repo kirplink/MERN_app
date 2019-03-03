@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
-import itemReducer from "./itemReducer";
+import { sessionReducer } from "redux-react-session";
+import userReducer from "./userReducer";
 
 export default combineReducers({
-    item: itemReducer
+	users: userReducer,
+	session: sessionReducer
 });
