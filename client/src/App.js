@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import AppNavbar from "./components/AppNavbar";
-import SignUp from "./components/SignUp";
-import Login from "./components/Login";
 import Home from "./components/Home";
 import { Container } from "reactstrap";
 
@@ -18,9 +16,7 @@ class App extends Component {
 					<div className="App">
 						<AppNavbar />
 						<Container>
-							<Route exact path="/home" component={Home} />
-							<Route exact path="/signup" component={SignUp} />
-							<Route exact path="/login" component={Login} />
+							<Route exact path="/" component={Home} />
 						</Container>
 					</div>
 				</Provider>
