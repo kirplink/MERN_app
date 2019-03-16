@@ -4,7 +4,6 @@ import "./LandingPage.css";
 import img from "../../img/hiddenlocalimg.jpeg";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import { verifyUser, logout } from "../../actions/userActions";
-import SignUp from "../SignUp";
 import Login from "../Login";
 
 class LandingPage extends Component {
@@ -35,10 +34,14 @@ class LandingPage extends Component {
 			<div className="background">
 				<MDBContainer>
 					<MDBRow className="vh-100" center>
-						<MDBCol md="8" className="pic p-4" middle="true">
-							<img src={img} className="img-fluid z-depth-3 rounded" />
+						<MDBCol md="8" className="pic p-4" middle={true}>
+							<img
+								src={img}
+								className="img-fluid z-depth-3 rounded"
+								alt="explore map"
+							/>
 						</MDBCol>
-						<MDBCol md="4" className="pt-4 title" middle="true">
+						<MDBCol md="4" className="pt-4 title" middle={true}>
 							<p className="h1 red-text">Hidden Locales</p>
 							<p className="mb-4 red-text">
 								Discover Your City's Best Kept Secret

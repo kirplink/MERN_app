@@ -1,8 +1,5 @@
 import React from "react";
 import "./ExplorePage.css";
-import Navbar from "../Navbar/Navbar";
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import { Carousel } from 'react-responsive-carousel';
 import MapWithASearchBox from "../MyMap/MapSearch";
 import Slides from "../Carousel/Carousel";
 
