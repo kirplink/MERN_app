@@ -2,10 +2,6 @@ import { ADD_USER, LOGIN_USER, AUTH_USER, LOGOUT } from "./types";
 import { sessionService } from "redux-react-session";
 import axios from "axios";
 
-// export const addUser = user => dispatch => {
-// 	axios.post("/api/items", user).then(res => console.log(res.data));
-// };
-
 export const addUser = userData => dispatch => {
 	axios.post("/api/signup", userData).then(res =>
 		dispatch({

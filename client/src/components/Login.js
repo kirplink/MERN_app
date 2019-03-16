@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import {
-	Button,
-	Form,
-	FormGroup,
-	Label,
-	Input,
-	Modal,
-	ModalHeader,
-	ModalBody
-} from "reactstrap";
+	MDBContainer,
+	MDBRow,
+	MDBCol,
+	MDBInput,
+	MDBBtn,
+	MDBCard
+} from "mdbreact";
 import { connect } from "react-redux";
 import { loginUser } from "../actions/userActions";
 
@@ -17,16 +15,9 @@ class Login extends Component {
 		super(props);
 		this.state = {
 			userName: "",
-			password: "",
-			modal: false
+			password: ""
 		};
 	}
-
-	toggle = () => {
-		this.setState({
-			modal: !this.state.modal
-		});
-	};
 
 	onChange = event => {
 		this.setState({ [event.target.name]: event.target.value });
@@ -42,45 +33,48 @@ class Login extends Component {
 		};
 
 		this.props.loginUser(user);
-		this.toggle();
 	};
 
 	render() {
 		return (
-			<div body className="mb-4">
-				<Button onClick={this.toggle}>Login</Button>
-				<Modal isOpen={this.state.modal} toggle={this.toggle}>
-					<ModalHeader toggle={this.toggle}>Login</ModalHeader>
-					<ModalBody>
-						<Form onSubmit={this.onSubmit}>
-							<FormGroup>
-								<Label for="userName">User Name</Label>
-								<Input
-									type="text"
-									name="userName"
-									id="userName"
-									placeholder="User Name"
-									onChange={this.onChange}
-									value={this.state.userName}
-								/>
-							</FormGroup>
-							<FormGroup>
-								<Label for="password">Password</Label>
-								<Input
-									type="password"
-									name="password"
-									id="password"
-									placeholder="Password"
-									onChange={this.onChange}
-								/>
-							</FormGroup>
-							<Button color="dark" style={{ marginTop: "2rem " }} block>
-								Sign Up
-							</Button>
-						</Form>
-					</ModalBody>
-				</Modal>
-			</div>
+			<MDBContainer>
+				<MDBRow>
+					<MDBCol>
+						<MDBCard className="p-4">
+							<form onSubmit={this.onSubmit}>
+								<p className="h5 text-center mb-4">Login</p>
+								<div className="grey-text">
+									<MDBInput
+										label="Username"
+										icon="user"
+										group
+										type="text"
+										validate
+										error="wrong"
+										success="right"
+										name="userName"
+										onChange={this.onChange}
+										value={this.state.userName}
+									/>
+									<MDBInput
+										label="Type your password"
+										icon="lock"
+										group
+										type="password"
+										validate
+										name="password"
+										onChange={this.onChange}
+										value={this.state.password}
+									/>
+								</div>
+								<div className="text-center">
+									<MDBBtn type="submit">Login</MDBBtn>
+								</div>
+							</form>
+						</MDBCard>
+					</MDBCol>
+				</MDBRow>
+			</MDBContainer>
 		);
 	}
 }

@@ -1,24 +1,14 @@
-# MERN - Passport
+# HIDDEN LOCALE
 
-A React app that uses Express, Passport, and Redux for user authentication.
+Ever get tired of going to the same crowded and overly hyped up places? Well, you are in luck! Hidden Locale is an app that easily finds you places that only the locals know about. No more jam packed parks, resturants, bars, etc. Just local fun as told by the locals and the discreet traveller. 
 
-## Live Site
+*
+*
+*
 
-See it live at: [https://powerful-savannah-98721.herokuapp.com/](https://powerful-savannah-98721.herokuapp.com/)
+## Link Example
+[Github](https://github.com/imalik18/travel_App)
 
-## Built With
+<!-- ADD PHOTOS -->
 
-- React
-- Express
-- Passport
-- Redux
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+<!-- ADD LANGUAGES USED -->

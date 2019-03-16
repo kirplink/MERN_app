@@ -19,6 +19,10 @@ export default function(state = initialState, action) {
 				user: action.payload
 			};
 		case ADD_USER:
+			sessionService
+				.saveSession({ user: action.payload })
+				.then(sessionService.saveUser({ user: action.payload }));
+
 			return {
 				...state,
 				user: action.payload
@@ -30,6 +34,7 @@ export default function(state = initialState, action) {
 				user: action.payload
 			};
 		case LOGOUT:
+			window.location.reload(true);
 			return {
 				...state,
 				user: {}
